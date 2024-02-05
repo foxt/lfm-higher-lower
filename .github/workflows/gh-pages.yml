@@ -38,6 +38,7 @@ jobs:
         run:  npm i -g parcel
       - name: Install dependencies
         run:  npm i
+        working-directory: game
       - name: Build web app
         run:  parcel build
         working-directory: game
