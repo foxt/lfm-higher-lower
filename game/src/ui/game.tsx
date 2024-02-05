@@ -8,6 +8,11 @@ type Props = {
     data: Awaited<typeof data>;
 };
 
+
+const Footer = () => <>
+    <ShareLinks text={`lastfm higher lower game - can you beat my score of ${parseInt(localStorage.getItem('highscore') || '0')}?`}/>
+    <p>by <a href="https://foxt.dev" target="_blank">foxt</a> &bull; not associated or endorsed by last.fm &bull; consider <a href='https://github.com/sponsors/foxt' target='_blank'>supporting ❤️</a></p>
+</>
 export class Game extends Component<Props, {
     history: Artist[];
     previous: Artist;
@@ -29,7 +34,6 @@ export class Game extends Component<Props, {
     choicesRef = createRef();
     render() {
         let prev = this.state.previous;
-        let shareText = 'lastfm higher lower game - can you beat my score of ' + parseInt(localStorage.getItem('highscore') || '0') + '?';
         return (
             <div class='gameContainer'>
                 <div class='historyView'>
@@ -65,8 +69,7 @@ export class Game extends Component<Props, {
                                 </div>
                             </div>
                             <div class='hideSmall'>
-                                <ShareLinks text={shareText}/>
-                                <p>by <a href="https://foxt.dev" target="_blank">foxt</a> &bull; not associated or endorsed by last.fm</p>
+                                <Footer/>
                             </div>
                         </> : <>
                             <p>Game over! Your score was {this.state.score} - highest: {localStorage.getItem('highscore')}</p>
@@ -74,8 +77,7 @@ export class Game extends Component<Props, {
                                 Play again
                             </button>
                             <div>
-                                <ShareLinks text={shareText}/>
-                                <p>by <a href="https://foxt.dev" target="_blank">foxt</a> &bull; not associated or endorsed by last.fm</p>
+                                <Footer/>
                             </div>
                         </>}
                 </div>

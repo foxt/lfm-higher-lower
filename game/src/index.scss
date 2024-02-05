@@ -224,7 +224,7 @@ p {
     
 }
 
-button,a {
+button,.button {
     appearance: none;
     border: none;
     background: var(--zinc-300);
@@ -239,6 +239,9 @@ button,a {
     }
     cursor: pointer;
     text-align: left;
+}
+a {
+    color: var(--zinc-50);
 }
 
 .slinks {
