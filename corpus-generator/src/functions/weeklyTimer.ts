@@ -19,9 +19,8 @@ export async function weeklyTimer(myTimer: Timer, context: InvocationContext): P
 
     let currentDate = new Date();
     let currentFileName= `${currentDate.getFullYear()}-${currentDate.getMonth()+1}-${currentDate.getDate()}.tsv`;
-    let blob = blobClient.getBlockBlobClient(currentFileName);
     await blobClient.createIfNotExists();
-    await blobClient.setAccessPolicy("blob");
+    let blob = blobClient.getBlockBlobClient(currentFileName);
     await blob.uploadData(Buffer.from(data,'utf-8'));
     context.log(`Uploaded ${currentFileName}`);
     let latestBlob = blobClient.getBlockBlobClient("latest");

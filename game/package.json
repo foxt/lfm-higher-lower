@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "lfm-higher-lower",
+  "version": "1.0.0",
+  "description": "LFM Higher Lower Game",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxt/lfm-higher-lower.git"
+  },
+  "author": "foxt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foxt/lfm-higher-lower/issues"
+  },
+  "homepage": "https://github.com/foxt/lfm-higher-lower#readme",
+  "dependencies": {
+    "preact": "^10.19.3",
+    "typescript": "^5.3.3"
+  }
+}

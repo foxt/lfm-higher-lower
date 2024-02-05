@@ -1,0 +1,4 @@
+.DS_Store
+.parcel-cache
+game/dist
+node_modules

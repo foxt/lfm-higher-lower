@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "ES2015",
+      "module": "NodeNext",
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "NodeNext",
+      "allowJs": true,
+      "lib": ["dom", "ES2020"],
+      "jsx": "react",
+      "jsxFactory": "h",
+      "jsxFragmentFactory": "Fragment",
+      "typeRoots": ["lib"],
+      "allowImportingTsExtensions": true,
+      "noEmit": true,
+      "pretty": true,
+      "baseUrl": "src",
+    },
+    "include": [
+      "./**/*.ts",
+      "./**/*.tsx",
+      "./**/*.js"
+    ],
+
+    
+    "exclude": ["node_modules", "**/*.spec.ts", "dist"],
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Recommended"
+  }

@@ -1,9 +1,9 @@
-const API_KEY = process.env.LASTFM_API_KEY; //b123054f373be30e2e115a6d1a4c251a
+const API_KEY = process.env.LASTFM_API_KEY;
 
 export function fetchTopArtists(page=1) {
     console.log(`Fetching page ${page}`);
     return fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${API_KEY}&format=json&limit=99&page=${page}`
+        `http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${API_KEY}&format=json&limit=99&page=${page}`,
         {headers: { "User-Agent": "lfm-higher-lower Corpus Generator" }}    
     )
         .then(res => res.json())
